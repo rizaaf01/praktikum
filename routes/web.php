@@ -1,6 +1,8 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BiodataController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,9 +29,14 @@ Route::get('/biodata', function () {
         'alamat' => 'cipasir',
         'telp' => '08977712345',
         'email' => 'rizaakmalf01@gmail.com',
-
-
     ];
+
     return view('biodata',$YGY);
 });
+
+
+Route::get('/list', [BiodataController::class, 'index']);
+
+
+
 
